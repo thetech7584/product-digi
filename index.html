@@ -1,123 +1,210 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Facebook in 100 Days</title>
+    <title>Digital Product Landing Page</title>
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
             text-align: center;
+            background: #f9f9f9;
         }
 
-        .header {
-            background-color: #1877f2;
-            color: white;
-            padding: 50px 20px;
-        }
-
-        .header h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        .header h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .header p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            background-color: #ff9800;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .mockup {
-            margin: 40px auto;
-            max-width: 600px;
-        }
-
-        .mockup img {
+        /* Product Photo Section */
+        .product-photo img {
             width: 100%;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .features, .testimonials, .faq {
-            padding: 50px 20px;
             max-width: 800px;
-            margin: auto;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease-in-out;
         }
 
-        .feature, .testimonial, .faq-item {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 15px;
+        .product-photo img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Buy Button + Discount */
+        .buy-now {
+            background: #ff5722;
+            color: #fff;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
             border-radius: 5px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            animation: pulse 1.5s infinite;
+        }
+
+        .discount-badge {
+            background: #ffd700;
+            color: #000;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 3px;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
+
+        /* Pulse Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Product Description */
+        .product-description {
+            padding: 20px;
+            background: #fff;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .product-description ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-description li {<img src="product.jpg" alt="Premium Digital Product">
+            padding: 5px 0;
+        }
+
+        /* Animated CTA Button */
+        .get-started {
+            background: #28a745;
+            color: #fff;
+            font-size: 18px;
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .get-started:hover {
+            background: #218838;
+            transform: translateY(-3px);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 20px;
         }
 
         .testimonial {
-            border-left: 5px solid #ff9800;
+            background: #fff;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            width: 250px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
 
-        .faq-item h3 {
-            margin: 0;
-            font-size: 18px;
+        .fade-in {
+            opacity: 1;
         }
 
-        .faq-item p {
-            margin: 5px 0 0;
+        /* FAQ Section */
+        .faq {
+            background: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+        }
+
+        .faq-question:focus + .faq-answer {
+            display: block;
+        }
+
+        /* Sticky Buy Button */
+        .sticky-buy {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff5722;
+            color: #fff;
+            padding: 15px;
             font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <section class="header">
-        <h1>Master Facebook in 100 Days: <br> Transform from Novice to Ads & Organic Growth Pro!</h1>
-        <h2>₹299 for Lifetime Access</h2>
-        <p>Follow Our Daily Step-by-Step Blueprint to Skyrocket Engagement, Dominate Your Niche, and Turn Facebook into Your Ultimate Sales Machine.</p>
+    <!-- Product Photo Section -->
+    <section class="product-photo">
+        <img src="product.jpg" alt="Product Image">
     </section>
 
-    <!-- Product Mockup -->
-    <section class="mockup">
-        <img src="Mastery_20250314_214221_0000.png" alt="Product Mockup">
+    <!-- Buy Button + Discount -->
+    <section class="buy-section">
+        <button class="buy-now">Buy Now <span class="discount-badge">50% OFF!</span></button>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Product Description -->
+    <section class="product-description">
+        <h2>Why Choose Our Product?</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Praesent commodo cursus magna, vel scelerisque nisl.</li>
+            <li>Donec sed odio dui. Cras justo odio, dapibus ac facilisis.</li>
+        </ul>
+    </section>
+
+    <!-- Animated CTA Button -->
+    <section class="cta">
+        <button class="get-started">Get Started</button>
+    </section>
+
+    <!-- Testimonials + Ratings -->
     <section class="testimonials">
-        <h2>What Our Students Say</h2>
-        <div class="testimonial">
-            <p>⭐⭐⭐⭐⭐ <br> “This course turned my ₹10k/month side hustle into a ₹1.2L/month business! The ad strategies are GOLD.”</p>
-            <strong>– Rohan Kumar, Delhi</strong>
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial fade-in">
+            <img src="https://i.pravatar.cc/100?img=1" alt="Customer">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Absolutely amazing product!"</p>
         </div>
-        <div class="testimonial">
-            <p>⭐⭐⭐⭐⭐ <br> “I went from 300 followers to 25k in 70 days! The organic growth hacks WORK – my WhatsApp is now full of clients!”</p>
-            <strong>– Sneha Desai, Mumbai</strong>
+        <div class="testimonial fade-in">
+            <img src="https://i.pravatar.cc/100?img=2" alt="Customer">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Highly recommend it to everyone!"</p>
         </div>
-        <div class="testimonial">
-            <p>⭐⭐⭐⭐⭐ <br> “Saved ₹80k+ on agencies! The DIY content templates and reel ideas boosted my boutique sales by 200%.”</p>
-            <strong>– Ayesha Khan, Hyderabad</strong>
-        </div>
-        <div class="testimonial">
-            <p>⭐⭐⭐⭐⭐ <br> “As a busy mom, the 20-minute daily tasks saved me HOURS. Now I run FB ads while my kids nap!”</p>
-            <strong>– Nandini Rao, Bengaluru</strong>
+        <div class="testimonial fade-in">
+            <img src="https://i.pravatar.cc/100?img=3" alt="Customer">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Best investment I've ever made!"</p>
         </div>
     </section>
 
@@ -125,51 +212,29 @@
     <section class="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-item">
-            <h3>❓ Do I need prior Facebook marketing experience?</h3>
-            <p>No! This course is designed for absolute beginners.</p>
+            <button class="faq-question">What is included in the package?</button>
+            <div class="faq-answer">You get full access to our premium features.</div>
         </div>
         <div class="faq-item">
-            <h3>❓ How much time do I need daily?</h3>
-            <p>Just 30-45 minutes/day! Tasks are bite-sized and actionable.</p>
+            <button class="faq-question">Is there a refund policy?</button>
+            <div class="faq-answer">Yes, we offer a 30-day money-back guarantee.</div>
         </div>
         <div class="faq-item">
-            <h3>❓ Is this course updated for Facebook’s latest algorithm?</h3>
-            <p>Yes! You’ll get free lifetime updates.</p>
+            <button class="faq-question">How do I get customer support?</button>
+            <div class="faq-answer">You can contact us via email or live chat.</div>
         </div>
         <div class="faq-item">
-            <h3>❓ What tools do I need?</h3>
-            <p>Just a Facebook account! We use free tools like Meta Business Suite and Canva.</p>
+            <button class="faq-question">Is this a one-time payment?</button>
+            <div class="faq-answer">Yes, you pay once and get lifetime access.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Do I need any special software?</button>
+            <div class="faq-answer">No, it works directly in your browser.</div>
         </div>
     </section>
 
-    <!-- Features & Benefits -->
-    <section class="features">
-        <h2>Why This Course?</h2>
-        <div class="feature">
-            <h3>✅ Never Waste Time Guessing What to Do Next</h3>
-            <p>A <strong>daily step-by-step roadmap</strong> for 100 days, breaking down complex strategies into bite-sized, actionable tasks.</p>
-        </div>
-        <div class="feature">
-            <h3>✅ Skyrocket Engagement Without Expensive Tools</h3>
-            <p>Proven organic growth <strong>"hacks"</strong> and <strong>content templates</strong> to attract followers and build a loyal audience.</p>
-        </div>
-        <div class="feature">
-            <h3>✅ Stop Losing Money on Facebook Ads</h3>
-            <p><strong>Ads mastery toolkit</strong> – from budget hacks to high-converting copywriting formulas.</p>
-        </div>
-        <a href="YOUR_PAYMENT_LINK" class="btn">Get Lifetime Access</a>
-    </section>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelectorAll(".btn").forEach(button => {
-                button.addEventListener("click", function(event) {
-                    event.preventDefault();
-                    window.location.href = this.getAttribute("href");
-                });
-            });
-        });
-    </script>
+    <!-- Sticky Buy Button -->
+    <button class="sticky-buy">Buy Now - 50% OFF</button>
 
 </body>
 </html>
